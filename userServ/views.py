@@ -3,8 +3,12 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.shortcuts import HttpResponse, render_to_response, redirect
 import json
+from userServ.models import *
+from weather.models import *
+from clock.models import *
 # Create your views here.
 
+# 上传
 def upload_android_id(request):
 	android_id = None
 	if 'android_id' in request.POST:
